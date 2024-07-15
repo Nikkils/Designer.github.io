@@ -13,7 +13,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: rgba(255, 255, 255, 0.8); /* Фон рамки с прозрачностью */
+    background-color: #BDFF00; /* Фон рамки с прозрачностью */
     padding: 20px;
     border: 2px solid #000; /* Цвет и размер рамки */
     border-radius: 10px; /* Скругленные углы рамки */
