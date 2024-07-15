@@ -43,9 +43,14 @@ body {
     border-radius: 10px; /* Скругленные углы рамки */
     min-width: calc((310.23 / 1440) * 100vw); /* Минимальная ширина с учетом ширины экрана */
     min-height: calc((53.94 / 773) * 100vh); /* Минимальная высота с учетом высоты экрана */
-/*    width: auto;
-    height: auto;*/
     box-sizing: border-box; /* Учитывать padding и border в размере */
+}
+
+.header-container img {
+    max-width: 100%;
+    min-width: calc((277.46 / 1440) * 100vw);
+    min-height: calc((40.28 / 1440) * 100vw);
+    height: auto;
 }
 
 .header-container::before { /*гизма*/
@@ -58,13 +63,6 @@ body {
     border: 1px dashed red; /* Гид с красной пунктирной границей */
     pointer-events: none; /* Чтобы гид не перекрывал кликабельные элементы */
     box-sizing: border-box; /* Чтобы границы учитывались внутри размеров контейнера */
-}
-
-.header-container img {
-    max-width: 100%;
-    min-width: calc((277.46 / 1440) * 100vw);
-    min-height: calc((40.28 / 1440) * 100vw);
-    height: auto;
 }
 
 .text-left-container {
