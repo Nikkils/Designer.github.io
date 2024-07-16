@@ -295,4 +295,16 @@ body {
 .button-start:hover .arrow-head path {
     fill: black; /* Цвет наконечника при наведении */
 }
------------------------------------------------------------------------------------------------
+
+/*---------------------------------------HOVER--------------------------------------------------*/
+
+.dsgnr-agency {
+    position: absolute;
+    top: 736px;
+    left: 645px;
+    color: #797979;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+}
