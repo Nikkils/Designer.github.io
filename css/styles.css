@@ -92,6 +92,7 @@ body {
     font-size: 80px;
     color: white;
     line-height: 1.1;
+    box-sizing: border-box;
 }
 
 .text-light {
@@ -123,7 +124,9 @@ body {
     display: flex;
     flex-direction: column;
     align-items: flex-star;
+    justify-content: flex-start;
     gap: 12px;
+    box-sizing: border-box;
 }
 
 .social-network::before {
@@ -139,29 +142,77 @@ body {
 }
 
 .social-network-text {
-    align-self: stretch;
     color: #FFF;
     font-size: 16px;
     font-style: normal;
     font-weight: 500;
+    width: 96px;
+    height: auto;
     line-height: 150%; /* 24px */
+    box-sizing: border-box;
 }
 
 .social-icons {
     display: flex;
     align-items: center;
-    gap: 10px;
+    align-self: stretch;
+    gap: 4px;
+    flex-direction: row;
+    box-sizing: border-box;
 }
 
 .icon {
     display: flex;
     padding: 10px;
     align-items: center;
-    border-radius: 4px;
     border: 1px solid #FFF;
+    border-radius: 4px;
 }
 
 .icon img {
     width: 24px;
     height: 24px;
+}
+
+.skill-container {
+    position: absolute;
+    display: flex;
+    gap: 7px;
+    align-items: center;
+    align-content: center;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    color: white;
+    top: 202px;
+    left: 827px;
+    width: 381px;
+    height: 150px;
+    font-size: 1.125rem;
+    font-style: normal;
+    font-weight: 500;
+    box-sizing: border-box;
+}
+
+.skill-container::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 1px dashed red; /* Гид с красной пунктирной границей для social-network */
+    pointer-events: none; /* Чтобы гид не перекрывал кликабельные элементы */
+    box-sizing: border-box; /* Чтобы границы учитывались внутри размеров контейнера */
+}
+
+.skill-UX-UI, .skill-Motion, .skill-3D, .skill-Айдентика, .skill-Верстка, .skill-AI-Изображения, .skill-Баннеры {
+    display: flex;
+    padding: 10px;
+    text-align: left;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    border-radius: 4px;
+    border: 1px solid #4A4A4A;
+    font-size: 18px;
 }
