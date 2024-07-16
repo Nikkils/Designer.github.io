@@ -8,7 +8,7 @@ body {
     background: #171717;
     background-size: cover;
     background-position: center;
-    font-family: Montserrat;
+    font-family: Montserrat, sans-serif;
 }
 
 .grid-overlay {
@@ -16,15 +16,17 @@ body {
     top: 0;
     left: 50%;
     transform: translateX(-50%);
-    width: 1440px;
-    height: 773px;
-    border: 2px dashed #00FF00; /* Граница гизмы */
+    width: 100%;
+    max-width: 1440px;
+    height: 100%;
+    max-height: 773px;
+    border: 2px dashed #00FF00;
     box-sizing: border-box;
     pointer-events: none;
-    z-index: 1000; /* Чтобы гизма была поверх всех элементов */
+    z-index: 1000;
 }
 
-.container { /*Контейнер .container используется для обеспечения относительного позиционирования. Контейнер .header-container позиционируется абсолютно внутри .container с заданными отступами (top: 52px и left: 565px).*/
+.container {
     position: relative;
     display: flex;
     justify-content: center;
@@ -32,71 +34,67 @@ body {
     height: 100%;
 }
 
-.container::before { /*гизма*/
+.container::before {
     content: '';
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    border: 1px dashed red; /* Пунктирная граница для контейнера */
-    pointer-events: none; /* Чтобы граница не перекрывала кликабельные элементы */
+    border: 1px dashed red;
+    pointer-events: none;
     box-sizing: border-box;
 }
 
-
-
 .header-container {
     position: absolute;
-    top: 52px; /* Отступ сверху */
-    left: 565px; /* Отступ слева */
+    top: calc(52 / 773 * 100vh);
+    left: calc(565 / 1440 * 100vw);
     display: flex;
     justify-content: center;
     align-items: center;
     background-color: #BDFF00;
-    padding: 6.83px 16.39px; /* Отступы согласно макету Figma */
-    border: 2px solid #000; /* Цвет и размер рамки */
-    border-radius: 10px; /* Скругленные углы рамки */
-    min-width: 310.23px; /* Минимальная ширина с учетом ширины экрана */
-    min-height: 53.94px; /* Минимальная высота с учетом высоты экрана */
-    box-sizing: border-box; /* Учитывать padding и border в размере */
+    padding: calc(6.83 / 773 * 100vh) calc(16.39 / 1440 * 100vw);
+    border: 2px solid #000;
+    border-radius: 10px;
+    min-width: calc(310.23 / 1440 * 100vw);
+    min-height: calc(53.94 / 773 * 100vh);
+    box-sizing: border-box;
 }
-
 
 .header-container img {
     max-width: 100%;
-    min-width: 277.46;
-    min-height: 40.28;
+    min-width: calc(277.46 / 1440 * 100vw);
+    min-height: calc(40.28 / 1440 * 100vw);
     height: auto;
 }
 
-.header-container::before { /*гизма*/
+.header-container::before {
     content: '';
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    border: 1px dashed red; /* Гид с красной пунктирной границей */
-    pointer-events: none; /* Чтобы гид не перекрывал кликабельные элементы */
-    box-sizing: border-box; /* Чтобы границы учитывались внутри размеров контейнера */
+    border: 1px dashed red;
+    pointer-events: none;
+    box-sizing: border-box;
 }
 
 .text-left-container {
     position: absolute;
-    top: 179px; /* Отступ сверху */
-    left: 231px; /* Отступ слева */
-    width: 486px; /* Ширина текста */
-/*    height: 440px;*/
+    top: calc(179 / 773 * 100vh);
+    left: calc(231 / 1440 * 100vw);
+    width: calc(486 / 1440 * 100vw);
     font-weight: 900;
-    font-size: 80px;
+    font-size: calc(80 / 1440 * 100vw);
     color: white;
     line-height: 1.1;
     box-sizing: border-box;
 }
 
 .text-light {
-    color:#BDFF00;
+    color: #BDFF00;
 }
 
 .text-left-container svg {
@@ -111,21 +109,21 @@ body {
     left: 0;
     width: 100%;
     height: 100%;
-    border: 1px dashed red; /* Гид с красной пунктирной границей */
-    pointer-events: none; /* Чтобы гид не перекрывал кликабельные элементы */
-    box-sizing: border-box; /* Чтобы границы учитывались внутри размеров контейнера */
+    border: 1px dashed red;
+    pointer-events: none;
+    box-sizing: border-box;
 }
 
 .social-network {
     position: absolute;
-    top: 545px; /* Отступ сверху с учетом высоты макета */
-    left: 573px; /* Отступ слева с учетом ширины макета */
-    width: 96px;
+    top: calc(545 / 773 * 100vh);
+    left: calc(573 / 1440 * 100vw);
+    width: calc(96 / 1440 * 100vw);
     display: flex;
     flex-direction: column;
-    align-items: flex-star;
+    align-items: flex-start;
     justify-content: flex-start;
-    gap: 12px;
+    gap: calc(12 / 1440 * 100vw);
     box-sizing: border-box;
 }
 
@@ -136,19 +134,19 @@ body {
     left: 0;
     width: 100%;
     height: 100%;
-    border: 1px dashed red; /* Гид с красной пунктирной границей для social-network */
-    pointer-events: none; /* Чтобы гид не перекрывал кликабельные элементы */
-    box-sizing: border-box; /* Чтобы границы учитывались внутри размеров контейнера */
+    border: 1px dashed red;
+    pointer-events: none;
+    box-sizing: border-box;
 }
 
 .social-network-text {
     color: #FFF;
-    font-size: 16px;
+    font-size: calc(16 / 1440 * 100vw);
     font-style: normal;
     font-weight: 500;
-    width: 96px;
+    width: calc(96 / 1440 * 100vw);
     height: auto;
-    line-height: 150%; /* 24px */
+    line-height: 150%;
     box-sizing: border-box;
 }
 
@@ -156,22 +154,22 @@ body {
     display: flex;
     align-items: center;
     align-self: stretch;
-    gap: 4px;
+    gap: calc(4 / 1440 * 100vw);
     flex-direction: row;
     box-sizing: border-box;
 }
 
 .icon {
     display: flex;
-    padding: 10px;
+    padding: calc(10 / 1440 * 100vw);
     align-items: center;
     border: 1px solid #FFF;
     border-radius: 4px;
 }
 
 .icon img {
-    width: 24px;
-    height: 24px;
+    width: calc(24 / 1440 * 100vw);
+    height: calc(24 / 1440 * 100vw);
 }
 
 .skill-container {
@@ -181,12 +179,12 @@ body {
     justify-items: flex-start;
     flex-wrap: wrap;
     color: white;
-    top: 202px;
-    left: 827px;
-    width: 381px;
+    top: calc(202 / 773 * 100vh);
+    left: calc(827 / 1440 * 100vw);
+    width: calc(381 / 1440 * 100vw);
     height: auto;
     box-sizing: border-box;
-    gap: 12px;
+    gap: calc(12 / 1440 * 100vw);
 }
 
 .skill-container::before {
@@ -196,20 +194,20 @@ body {
     left: 0;
     width: 100%;
     height: 100%;
-    border: 1px dashed red; /* Гид с красной пунктирной границей для social-network */
-    pointer-events: none; /* Чтобы гид не перекрывал кликабельные элементы */
-    box-sizing: border-box; /* Чтобы границы учитывались внутри размеров контейнера */
+    border: 1px dashed red;
+    pointer-events: none;
+    box-sizing: border-box;
 }
 
 .skill-UX-UI, .skill-Motion, .skill-3D, .skill-Айдентика, .skill-Верстка, .skill-AI-Изображения, .skill-Баннеры {
     display: flex;
-    padding: 10px;
+    padding: calc(10 / 1440 * 100vw);
     text-align: left;
     justify-content: center;
     align-items: center;
     border-radius: 4px;
     border: 1px solid #4A4A4A;
-    font-size: 18px;
+    font-size: calc(18 / 1440 * 100vw);
     font-weight: 500;
     font-style: normal;
     line-height: normal;
@@ -218,14 +216,14 @@ body {
 .button-start {
     display: flex;
     position: absolute;
-    top: 457px;
-    left: 827px;
-    width: 379px;
-    height: 147px;
-    padding: 20px 32px;
+    top: calc(457 / 773 * 100vh);
+    left: calc(827 / 1440 * 100vw);
+    width: calc(379 / 1440 * 100vw);
+    height: calc(147 / 773 * 100vh);
+    padding: calc(20 / 773 * 100vh) calc(32 / 1440 * 100vw);
     justify-content: center;
     align-items: center;
-    gap: 10px;
+    gap: calc(10 / 1440 * 100vw);
     border-radius: 4px;
     border: 1px solid #BCFF02;
     background-color: transparent;
@@ -239,16 +237,15 @@ body {
     left: 0;
     width: 100%;
     height: 100%;
-    border: 1px dashed red; /* Гид с красной пунктирной границей для social-network */
-    pointer-events: none; /* Чтобы гид не перекрывал кликабельные элементы */
-    box-sizing: border-box; /* Чтобы границы учитывались внутри размеров контейнера */
-
+    border: 1px dashed red;
+    pointer-events: none;
+    box-sizing: border-box;
 }
 
 .text-start {
     color: #BCFF02;
-    font-family: Inter;
-    font-size: 16px;
+    font-family: Inter, sans-serif;
+    font-size: calc(16 / 1440 * 100vw);
     font-style: normal;
     font-weight: 400;
     line-height: normal;
@@ -261,31 +258,31 @@ body {
 }
 
 .arrow-line {
-    width: 40px;
+    width: calc(40 / 1440 * 100vw);
     height: 1px;
     transition: width 300ms ease-in-out;
 }
 
 .arrow-head {
-    width: 9px;
-    height: 9px;
+    width: calc(9 / 1440 * 100vw);
+    height: calc(9 / 1440 * 100vw);
     flex-shrink: 0;
     transition: fill 300ms ease-in-out;
 }
 
-/*---------------------------------------HOVER--------------------------------------------------*/
+/* Hover effects */
 .button-start:hover {
     background-color: #BCFF02;
 }
 
 .button-start:hover .text-start {
-    transform: translateX(-35px);
-    color: #1E1E1E; /* Цвет текста при наведении */
+    transform: translateX(calc(-35 / 1440 * 100vw));
+    color: #1E1E1E;
     font-weight: 500;
 }
 
 .button-start:hover .arrow-line {
-    width: 109px; /* Расширяем только линию */
+    width: calc(109 / 1440 * 100vw);
 }
 
 .button-start:hover .arrow-line line {
@@ -293,17 +290,75 @@ body {
 }
 
 .button-start:hover .arrow-head path {
-    fill: black; /* Цвет наконечника при наведении */
+    fill: black;
 }
 
-/*---------------------------------------HOVER--------------------------------------------------*/
+/* Image positioning */
+.cube_left_top, .cube_left_middle, .cube_left_bottom,
+.cube_right_top, .cube_right_middle, .cube_right_bottom {
+    position: absolute;
+}
+
+.cube_left_top {
+    top: calc(-205 / 773 * 100vh);
+    left: calc(11.15 / 1440 * 100vw);
+    width: calc(303.96 / 1440 * 100vw);
+    height: calc(303.96 / 773 * 100vh);
+    transform: rotate(21.11deg);
+    transform-origin: 0 0;
+}
+
+.cube_left_middle {
+    top: calc(836.94 / 773 * 100vh);
+    left: calc(153.48 / 1440 * 100vw);
+    width: calc(379.82 / 1440 * 100vw);
+    height: calc(379.82 / 773 * 100vh);
+    transform: rotate(-174.25deg);
+    transform-origin: 0 0;
+}
+
+.cube_left_bottom {
+    top: calc(1015.51 / 773 * 100vh);
+    left: calc(176.21 / 1440 * 100vw);
+    width: calc(289.53 / 1440 * 100vw);
+    height: calc(289.53 / 773 * 100vh);
+    transform: rotate(-105.25deg);
+    transform-origin: 0 0;
+}
+
+.cube_right_top {
+    top: calc(-286.9 / 773 * 100vh);
+    left: calc(1231.26 / 1440 * 100vw);
+    width: calc(313.98 / 1440 * 100vw);
+    height: calc(313.98 / 773 * 100vh);
+    transform: rotate(30.69deg);
+    transform-origin: 0 0;
+}
+
+.cube_right_middle {
+    top: calc(-57.3 / 773 * 100vh);
+    left: calc(1446.08 / 1440 * 100vw);
+    width: calc(379.82 / 1440 * 100vw);
+    height: calc(379.82 / 773 * 100vh);
+    transform: rotate(45.69deg);
+    transform-origin: 0 0;
+}
+
+.cube_right_bottom {
+    top: calc(1000.94 / 773 * 100vh);
+    left: calc(1462.91 / 1440 * 100vw);
+    width: calc(379.82 / 1440 * 100vw);
+    height: calc(379.82 / 773 * 100vh);
+    transform: rotate(-174.25deg);
+    transform-origin: 0 0;
+}
 
 .dsgnr-agency {
     position: absolute;
-    top: 736px;
-    left: 645px;
+    top: calc(736 / 773 * 100vh);
+    left: calc(645 / 1440 * 100vw);
     color: #797979;
-    font-size: 14px;
+    font-size: calc(14 / 1440 * 100vw);
     font-style: normal;
     font-weight: 500;
     line-height: normal;
