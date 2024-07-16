@@ -242,6 +242,7 @@ body {
     border: 1px dashed red; /* Гид с красной пунктирной границей для social-network */
     pointer-events: none; /* Чтобы гид не перекрывал кликабельные элементы */
     box-sizing: border-box; /* Чтобы границы учитывались внутри размеров контейнера */
+
 }
 
 .text-start {
@@ -254,23 +255,44 @@ body {
     transition: transform 300ms ease-in-out, color 300ms ease-in-out;
 }
 
-.arrow-start {
-    width: 40px;
-/*    height: 0px;*/
-    transition: width 300ms ease-in-out, filter 300ms ease-in-out;
+.arrow-container {
+    display: flex;
+    align-items: center;
 }
 
+.arrow-line {
+    width: 40px;
+    height: 1px;
+    transition: width 300ms ease-in-out;
+}
+
+.arrow-head {
+    width: 9px;
+    height: 9px;
+    flex-shrink: 0;
+    transition: fill 300ms ease-in-out;
+}
+
+/*---------------------------------------HOVER--------------------------------------------------*/
 .button-start:hover {
     background-color: #BCFF02;
 }
 
 .button-start:hover .text-start {
     transform: translateX(-35px);
-    color: #171717; /* Цвет текста при наведении */
+    color: #1E1E1E; /* Цвет текста при наведении */
     font-weight: 500;
 }
 
-.button-start:hover .arrow-start {
-    width: 109px;
-    filter: invert(1); /* Инвертирование цвета стрелки */
+.button-start:hover .arrow-line {
+    width: 109px; /* Расширяем только линию */
 }
+
+.button-start:hover .arrow-line line {
+    stroke: black;
+}
+
+.button-start:hover .arrow-head path {
+    fill: black; /* Цвет наконечника при наведении */
+}
+-----------------------------------------------------------------------------------------------
