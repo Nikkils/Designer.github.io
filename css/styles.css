@@ -9,6 +9,7 @@ body {
     background-size: cover;
     background-position: center;
     font-family: Montserrat, sans-serif;
+    overflow: hidden; /* Обрезаем выходящий за пределы экран контент */
 }
 
 .grid-overlay {
@@ -298,6 +299,7 @@ body {
 .cube_left_top, .cube_left_middle, .cube_left_bottom,
 .cube_right_top, .cube_right_middle, .cube_right_bottom {
     position: absolute;
+    overflow: hidden; /* Обрезаем содержимое, выходящее за пределы */
 }
 
 .cube_left_top {
@@ -363,4 +365,5 @@ body {
     font-style: normal;
     font-weight: 500;
     line-height: normal;
+    transform-origin: 0 0;
 }
