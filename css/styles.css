@@ -12,21 +12,21 @@ body {
     overflow: hidden; /* Обрезаем выходящий за пределы экран контент */
 }
 
-/*.grid-overlay {
+.grid-overlay {
     position: absolute;
     top: 0;
     left: 50%;
     transform: translateX(-50%);
     width: 100%;
-    max-width: 1440px;
+    max-width: 320px;
     height: 100%;
-    max-height: 773px;
+    max-height: 862px;
     border: 2px dashed #00FF00;
     box-sizing: border-box;
     pointer-events: none;
     z-index: 1000;
 }
-*/
+
 .container {
     position: relative;
     display: flex;
@@ -366,4 +366,108 @@ body {
     font-weight: 500;
     line-height: normal;
     transform-origin: 0 0;
+}
+
+@media (max-width: 320px) {
+.background-images {
+    display: none;
+}
+
+.header-container {
+    top: calc(26 / 862 * 100vh);
+    left: calc(20 / 320 * 100vw);
+    padding: calc(4.09 / 862 * 100vh) calc(9.82 / 320 * 100vw);
+    min-width: calc(186 / 320 * 100vw);
+    min-height: calc(32.34 / 862 * 100vh);
+}
+
+.header-container img {
+    top: calc(4.09 / 862 * 100vh); /* Позиция по Y */
+    left: calc(9.82 / 320 * 100vw); /* Позиция по X */
+    width: calc(166.35 / 320 * 100vw); /* Ширина вьюпорта */
+    height: calc(24.15 / 862 * 100vh); /* Высота вьюпорта */
+}
+
+.text-left-container {
+    top: calc(99 / 862 * 100vh);
+    left: calc(20 / 320 * 100vw);
+    width: calc(277 / 320 * 100vw);
+    font-weight: 900;
+    font-size: calc(46 / 320 * 100vw);
+    line-height: 120%;
+}
+
+.button-start {
+    top: calc(414 / 862 * 100vh);
+    left: calc(20 / 320 * 100vw);
+    width: calc(280 / 320 * 100vw);
+    height: calc(147 / 862 * 100vh);
+    padding: calc(20 / 862 * 100vh) calc(32 / 320 * 100vw);
+    gap: calc(10 / 320 * 100vw);
+}
+
+.text-start {
+    font-size: calc(16 / 320 * 100vw);
+}
+
+.arrow-line {
+    width: calc(40 / 320 * 100vw);}
+
+.arrow-head {
+    width: calc(19 / 320 * 100vw);
+    height: calc(9 / 320 * 100vw);
+}
+
+.button-start:hover .text-start {
+    transform: translateX(calc(-0.5 / 320 * 100vw));
+}
+
+.button-start:hover .arrow-line {
+    width: calc(40 / 320 * 100vw);
+}
+
+.skill-container {
+    top: calc(590.24 / 862 * 100vh);
+    left: calc(23 / 320 * 100vw);
+    width: calc(277 / 320 * 100vw);
+    gap: calc(8 / 320 * 100vw);
+}
+
+.skill-UX-UI, .skill-Motion, .skill-3D, .skill-Айдентика, .skill-Верстка, .skill-AI-Изображения, .skill-Баннеры {
+    padding: calc(10 / 320 * 100vw);
+    font-size: calc(12 / 320 * 100vw);
+}
+
+.dsgnr-agency {
+    top: calc(819 / 862 * 100vh);
+    left: calc(96 / 320 * 100vw);
+    font-size: calc(12 / 320 * 100vw);
+}
+
+.social-network {
+    position: absolute;
+    top: calc(328.24 / 862 * 100vh);
+    left: calc(203 / 320 * 100vw);
+    width: calc(96 / 320 * 100vw);
+    gap: calc(396 / 320 * 100vw);
+}
+
+.social-network-text {
+    font-size: calc(12 / 320 * 100vw);
+    width: calc(96 / 320 * 100vw);
+    margin-left: 10px;
+}
+
+.social-icons {
+    gap: calc(4 / 320 * 100vw);
+}
+
+.icon {
+    padding: calc(10 / 320 * 100vw);
+}
+
+.icon img {
+    width: calc(24 / 320 * 100vw);
+    height: calc(24 / 320 * 100vw);
+}
 }
