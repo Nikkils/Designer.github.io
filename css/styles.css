@@ -57,7 +57,6 @@ body {
     background-color: #BDFF00;
     padding: calc(6.83 / 773 * 100vh) calc(16.39 / 1440 * 100vw);
     border: 2px solid #000;
-    border-radius: 10px;
     min-width: calc(310.23 / 1440 * 100vw);
     min-height: calc(53.94 / 773 * 100vh);
     box-sizing: border-box;
