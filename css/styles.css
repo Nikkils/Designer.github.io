@@ -12,7 +12,7 @@ body {
     overflow: hidden; /* Обрезаем выходящий за пределы экран контент */
 }
 
-.grid-overlay {
+/*.grid-overlay {
     position: absolute;
     top: 0;
     left: 50%;
@@ -26,7 +26,7 @@ body {
     pointer-events: none;
     z-index: 1000;
 }
-
+*/
 .container {
     position: relative;
     display: flex;
@@ -35,7 +35,7 @@ body {
     height: 100%;
 }
 
-.container::before {
+/*.container::before {
     content: '';
     position: absolute;
     top: 0;
@@ -45,7 +45,7 @@ body {
     border: 1px dashed red;
     pointer-events: none;
     box-sizing: border-box;
-}
+}*/
 
 .header-container {
     position: absolute;
@@ -70,7 +70,7 @@ body {
     height: auto;
 }
 
-.header-container::before {
+/*.header-container::before {
     content: '';
     position: absolute;
     top: 0;
@@ -80,7 +80,7 @@ body {
     border: 1px dashed red;
     pointer-events: none;
     box-sizing: border-box;
-}
+}*/
 
 .text-left-container {
     position: absolute;
@@ -103,7 +103,7 @@ body {
     height: 100%;
 }
 
-.text-left-container::before {
+/*.text-left-container::before {
     content: '';
     position: absolute;
     top: 0;
@@ -113,7 +113,7 @@ body {
     border: 1px dashed red;
     pointer-events: none;
     box-sizing: border-box;
-}
+}*/
 
 .social-network {
     position: absolute;
@@ -128,7 +128,7 @@ body {
     box-sizing: border-box;
 }
 
-.social-network::before {
+/*.social-network::before {
     content: '';
     position: absolute;
     top: 0;
@@ -138,7 +138,7 @@ body {
     border: 1px dashed red;
     pointer-events: none;
     box-sizing: border-box;
-}
+}*/
 
 .social-network-text {
     color: #FFF;
@@ -188,7 +188,7 @@ body {
     gap: calc(12 / 1440 * 100vw);
 }
 
-.skill-container::before {
+/*.skill-container::before {
     content: '';
     position: absolute;
     top: 0;
@@ -198,7 +198,7 @@ body {
     border: 1px dashed red;
     pointer-events: none;
     box-sizing: border-box;
-}
+}*/
 
 .skill-UX-UI, .skill-Motion, .skill-3D, .skill-Айдентика, .skill-Верстка, .skill-AI-Изображения, .skill-Баннеры {
     display: flex;
@@ -232,7 +232,7 @@ body {
     box-sizing: border-box;
 }
 
-.button-start::before {
+/*.button-start::before {
     content: '';
     position: absolute;
     top: 0;
@@ -242,7 +242,7 @@ body {
     border: 1px dashed red;
     pointer-events: none;
     box-sizing: border-box;
-}
+}*/
 
 .text-start {
     color: #BCFF02;
