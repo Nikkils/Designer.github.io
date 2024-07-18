@@ -264,10 +264,14 @@ body {
     }
 
     .main-down {
-        margin-top: 7rem;
+        margin-top: 6.5rem;
     }
 
     .dsgnr-agency {
-        margin-top: 7.5rem;
+        margin-top: 4rem;
+    }
+
+    .social-icons{
+        margin-top: -1.5rem;
     }
 }
