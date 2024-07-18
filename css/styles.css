@@ -22,7 +22,7 @@ body {
     height: 785.34px;
 }
 
-/*.container::before {
+.container::before {
     content: '';
     position: absolute;
     top: 0;
@@ -32,7 +32,7 @@ body {
     border: 1px dashed green;
     pointer-events: none;
     box-sizing: border-box;
-}*/
+}
 
 .header-container {
     position: relative;
@@ -61,7 +61,7 @@ body {
     min-height: 24.15px;
 }
 
-/*.header-container::before {
+.header-container::before {
     content: '';
     position: absolute;
     top: 0;
@@ -72,7 +72,7 @@ body {
     pointer-events: none;
     box-sizing: border-box;
 }
-*/
+
 .main-container {
     position: relative;
     width: 100%;
@@ -80,7 +80,7 @@ body {
     margin-top: 2rem;
 }
 
-/*.main-container::before {
+.main-container::before {
     content: '';
     position: absolute;
     top: 0;
@@ -90,7 +90,7 @@ body {
     border: 1px dashed yellow;
     pointer-events: none;
     box-sizing: border-box;
-}*/
+}
 
 .main-top {
     position: relative;
@@ -106,7 +106,7 @@ body {
     box-sizing: border-box;
 }
 
-/*.main-down::before {
+.main-down::before {
     content: '';
     position: absolute;
     top: 0;
@@ -116,7 +116,7 @@ body {
     border: 1px dashed white;
     pointer-events: none;
     box-sizing: border-box;
-}*/
+}
 
 .web-text {
     position: relative;
@@ -231,7 +231,7 @@ body {
     line-height: normal;
 }
 
-/*.dsgnr-agency::before {
+.dsgnr-agency::before {
     content: '';
     position: absolute;
     top: 0;
@@ -241,7 +241,7 @@ body {
     border: 1px dashed red;
     pointer-events: none;
     box-sizing: border-box;
-}*/
+}
 
 @media (min-width: 320px) and (max-width: 360px) {
     .container {
@@ -264,10 +264,10 @@ body {
     }
 
     .main-down {
-        margin-top: 8rem;
+        margin-top: 7rem;
     }
 
     .dsgnr-agency {
-        margin-top: 8.5rem;
+        margin-top: 7.5rem;
     }
 }
