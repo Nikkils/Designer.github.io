@@ -18,7 +18,7 @@ body {
     align-items: flex-end;
     top: 32px;
     left: 20px;
-    width: calc(280px + (100vw - 320px) * (80 / 40));
+    width: calc(280px + (100vw - 320px) * (40 / 40));
     height: 785.34px;
 }
 
@@ -257,6 +257,32 @@ body {
 
     .web-text {
         font-size: 3.75rem;;
+    }
+
+    .button-start{
+        margin-top: 6rem;
+    }
+
+    .main-down {
+        margin-top: 6.5rem;
+    }
+
+    .dsgnr-agency {
+        margin-top: 6.5rem;
+    }
+
+    .social-icons{
+        margin-top: -1.5rem;
+    }
+}
+
+@media (min-width: 541px) and (max-width: 862px) {
+    .container {
+        width: calc(500px + (100vw - 541px) * (40 / 40));
+    }
+
+    .web-text {
+        font-size: 5rem;;
     }
 
     .button-start{
