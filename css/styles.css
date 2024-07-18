@@ -78,7 +78,7 @@ body {
     margin-top: 2rem;
 }
 
-.main-container::before {
+/*.main-container::before {
     content: '';
     position: absolute;
     top: 0;
@@ -88,7 +88,7 @@ body {
     border: 1px dashed yellow;
     pointer-events: none;
     box-sizing: border-box;
-}
+}*/
 
 .main-top {
     position: relative;
@@ -104,7 +104,7 @@ body {
     box-sizing: border-box;
 }
 
-.main-down::before {
+/*.main-down::before {
     content: '';
     position: absolute;
     top: 0;
@@ -114,7 +114,7 @@ body {
     border: 1px dashed white;
     pointer-events: none;
     box-sizing: border-box;
-}
+}*/
 
 .web-text {
     position: relative;
@@ -211,6 +211,10 @@ body {
     box-sizing: border-box;
 }
 
+.social-icons-independent {
+    display: none;
+}
+
 .icon {
     display: flex;
     padding: 10px;
@@ -257,6 +261,10 @@ body {
         top: 32px;
         left: 20px;
     }
+
+    .social-icons-independent {
+        display: none;
+    }
 }
 
 @media (min-width: 361px) and (max-width: 540px) {
@@ -265,6 +273,10 @@ body {
         height: 891.34px;
         top: 32px;
         left: 20px;
+    }
+
+    .social-icons-independent {
+        display: none;
     }
 
     .web-text {
@@ -299,6 +311,10 @@ body {
         height: 970px;
         margin: 0 auto;
     }
+
+    .social-icons-independent {
+        display: none;
+    }
     
     .header-container {
         height: 54px;
@@ -332,12 +348,12 @@ body {
 
     .skill-UX-UI, .skill-Motion, .skill-3D, .skill-Айдентика, .skill-Верстка, .skill-AI-Изображения, .skill-Баннеры {
         font-size: 18px;
-}
+    }
 
     .skill-container {
         width: 443px;
         gap: 12px;
-}
+    }
 
     .social-icons{
         margin-top: -23rem;
@@ -346,5 +362,90 @@ body {
 
     .dsgnr-agency {
         margin-top: 10rem;
+    }
+}
+
+@media (min-width: 863px) and (max-width: 1024px) {
+    .container {
+        width: calc(783px + (100vw - 863px) * (40 / 40));
+        height: 676px;
+        margin: 0 auto; /* Центрирование контейнера */
+    }
+    
+    .header-container {
+        height: 54px;
+        justify-content: center;
+    }
+
+    .header-designer {
+        width: 310px;
+    }
+
+    .web-text {
+        font-size: 5rem;
+        position: relative;
+        align-items: flex-start;
+        line-height: 110%;
+        margin-top: 2rem;
+    }
+
+    .social-network-text {
+        right: -9.7rem;
+        bottom: -7.2rem;
+        font-size: 1rem;
+    }
+
+    .main-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+    }
+
+    .main-down {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        margin-top: 14.5rem;
+    }
+
+    .skill-container {
+        width: calc(259px + (100vw - 863px) * (40 / 40));
+        gap: 12px;
+        margin-top: -40.5rem;
+        margin-left: 32.6rem;
+    }
+
+    .skill-UX-UI, .skill-Motion, .skill-3D, .skill-Айдентика, .skill-Верстка, .skill-AI-Изображения, .skill-Баннеры {
+        font-size: 18px;
+        justify-content: center;
+    }
+
+    .social-icons {
+        display: none;
+    }
+
+    .social-icons-independent {
+        display: flex;
+        width: 100%;
+        height: 44px;
+        justify-content: flex-end;
+        margin-top: -40px;
+        margin-left: 160px;
+        gap: 8px;
+        flex-direction: row;
+        box-sizing: border-box;
+    }
+
+    .button-start {
+        margin-top: 1.5rem;
+        margin-left: 32.7rem;
+        width: calc(259px + (100vw - 863px) * (40 / 40));
+        height: 147px;
+    }
+
+    .dsgnr-agency {
+        margin-top: -9rem;
     }
 }
