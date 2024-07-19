@@ -11,6 +11,10 @@ body {
     font-family: Montserrat, sans-serif;
 }
 
+.bg-image {
+    display: none;
+}
+
 .container {
     position: absolute;
     display: flex;
@@ -20,7 +24,7 @@ body {
     height: 785.34px;
 }
 
-.container::before {
+/*.container::before {
     content: '';
     position: absolute;
     top: 0;
@@ -30,7 +34,7 @@ body {
     border: 1px dashed green;
     pointer-events: none;
     box-sizing: border-box;
-}
+}*/
 
 .header-container {
     position: relative;
@@ -59,7 +63,7 @@ body {
     min-height: 24.15px;
 }
 
-.header-container::before {
+/*.header-container::before {
     content: '';
     position: absolute;
     top: 0;
@@ -69,7 +73,7 @@ body {
     border: 1px dashed red;
     pointer-events: none;
     box-sizing: border-box;
-}
+}*/
 
 .main-container {
     position: relative;
@@ -243,7 +247,7 @@ body {
     line-height: normal;
 }
 
-.dsgnr-agency::before {
+/*.dsgnr-agency::before {
     content: '';
     position: absolute;
     top: 0;
@@ -253,7 +257,7 @@ body {
     border: 1px dashed red;
     pointer-events: none;
     box-sizing: border-box;
-}
+}*/
 
 @media (min-width: 320px) and (max-width: 360px) {
     .container {
@@ -309,7 +313,8 @@ body {
     .container {
         width: 500px;
         height: 970px;
-        margin: 0 auto;
+        top: 32px; /*фикс марджина вертикальный*/
+        margin: auto 0; /*фикс марджина горизонтальный*/
     }
 
     .social-icons-independent {
@@ -449,3 +454,121 @@ body {
         margin-top: -9rem;
     }
 }
+
+@media (min-width: 1025px) and (max-width: 1440px) {
+    .container {
+        width: calc(945px + (100vw - 1025px) * (40 / 40));
+        margin: 0 auto;
+        top: 32px;
+        justify-content: normal;
+        display: flex;
+        align-items: center; /* Центрирование содержимого по горизонтали */
+    }
+    
+    .bg-image {
+        position: fixed;
+        display: flex;
+        justify-content: space-between;
+        pointer-events: none;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        pointer-events: none; /* Отключить взаимодействие с фоновыми изображениями */
+    }
+
+    .left_cubs {
+        position: absolute;
+        top: -205px;
+        left: -300px;
+        width: 679.97px;
+        height: 1220.51px;
+    }
+
+    .right_cubs {
+        position: absolute;
+        top: -200px;
+        right: -300px;
+        width: 640.4px;
+        height: 1287.85px;
+    }
+
+    .header-container {
+        height: 54px;
+        justify-content: center;
+        width: 100%; /* Занимает всю ширину контейнера */
+    }
+
+    .header-designer {
+        width: 310px;
+    }
+
+    .web-text {
+        font-size: 5rem;
+        position: relative;
+        align-items: flex-start;
+        line-height: 110%;
+        margin-top: 2rem;
+        margin-left: -42rem;
+    }
+
+    .social-network-text {
+        right: -9.7rem;
+        bottom: -7.2rem;
+        font-size: 1rem;
+    }
+
+    .main-top {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .main-down {
+        margin-top: 14.5rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%; /* Занимает всю ширину контейнера */
+    }
+
+    .skill-container {
+        width: 365px;
+        gap: 13px;
+        height: 150px;
+        margin-top: -40.5rem;
+        margin-left: 32.6rem;
+    }
+
+    .skill-UX-UI, .skill-Motion, .skill-3D, .skill-Айдентика, .skill-Верстка, .skill-AI-Изображения, .skill-Баннеры {
+        font-size: 18px;
+    }
+
+    .social-icons {
+        display: none;
+    }
+
+    .social-icons-independent {
+        display: flex;
+        width: 100%;
+        height: 44px;
+        justify-content: flex-end;
+        margin-top: -40px;
+        margin-left: 160px;
+        gap: 8px;
+        flex-direction: row;
+        box-sizing: border-box;
+    }
+
+    .button-start {
+        margin-top: 1.5rem;
+        margin-left: 32.7rem;
+        width: 365px;
+        height: 147px;
+    }
+
+    .dsgnr-agency {
+        margin-top: -6rem;
+    }
+}
+
