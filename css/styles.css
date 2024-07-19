@@ -151,6 +151,17 @@ body {
     background-color: transparent;
     transition: background-color 300ms ease-in-out;
     box-sizing: border-box;
+    gap: 20px;
+}
+
+.button-link {
+    display: flex;
+/*    width: 100%;*/
+/*    height: 100%;*/
+    color: white;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none; /* Убрать подчеркивание у ссылки */
 }
 
 .text-start {
@@ -247,16 +258,63 @@ body {
     line-height: normal;
 }
 
-/*.dsgnr-agency::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    border: 1px dashed red;
-    pointer-events: none;
-    box-sizing: border-box;
+.arrow-container {
+    display: flex;
+    align-items: center;    
+}
+
+.arrow-line {
+    width: calc(46 / 320 * 100vw);
+    height: 1px;
+    transition: width 300ms ease-in-out;
+}
+
+.arrow-head {
+    width: calc(10 / 320 * 100vw);
+    height: calc(11 / 320 * 100vw);
+    flex-shrink: 0;
+    margin-left: -10px;
+    transition: fill 300ms ease-in-out;
+}
+
+/* Hover effects */
+.button-start:hover {
+    background-color: #BCFF02;
+}
+
+.button-start:hover .arrow-line line {
+    stroke: black;
+}
+
+.button-start:hover .arrow-head path {
+    fill: black;
+}
+
+.button-start:hover .text-start {
+/*    transform: translateX(calc(-35 / 320 * 100vw));*/
+    color: #1E1E1E;
+    font-weight: 500;
+}
+
+.skill-UX-UI:hover, 
+.skill-Motion:hover, 
+.skill-3D:hover, 
+.skill-Айдентика:hover, 
+.skill-Верстка:hover, 
+.skill-AI-Изображения:hover, 
+.skill-Баннеры:hover {
+    color: #BCFF02; /* Измените это на желаемый цвет */
+}
+
+.icon:hover img {
+    filter: brightness(0) saturate(100%) invert(63%) sepia(97%) saturate(551%) hue-rotate(6deg) brightness(107%) contrast(101%);
+}
+
+
+
+
+/*.button-start:hover .arrow-line {
+    width: calc(109 / 320 * 100vw);
 }*/
 
 @media (min-width: 320px) and (max-width: 360px) {
@@ -294,6 +352,20 @@ body {
 
     .button-start{
         margin-top: 6rem;
+    }
+
+    .arrow-line {
+        width: calc(46 / 361 * 100vw);
+        height: 1px;
+        transition: width 300ms ease-in-out;
+    }
+
+    .arrow-head {
+        width: calc(10 / 361 * 100vw);
+        height: calc(11 / 361 * 100vw);
+        flex-shrink: 0;
+        margin-left: -10px;
+        transition: fill 300ms ease-in-out;
     }
 
     .main-down {
@@ -345,6 +417,20 @@ body {
         margin-top: 14rem;
         width: 365px;
         height: 147px;
+    }
+
+    .arrow-line {
+        width: calc(46 / 541 * 100vw);
+        height: 1px;
+        transition: width 300ms ease-in-out;
+    }
+
+    .arrow-head {
+        width: calc(10 / 541 * 100vw);
+        height: calc(11 / 541 * 100vw);
+        flex-shrink: 0;
+        margin-left: -10px;
+        transition: fill 300ms ease-in-out;
     }
 
     .main-down {
@@ -450,6 +536,20 @@ body {
         height: 147px;
     }
 
+    .arrow-line {
+        width: calc(46 / 863 * 100vw);
+        height: 1px;
+        transition: width 300ms ease-in-out;
+    }
+
+    .arrow-head {
+        width: calc(10 / 863 * 100vw);
+        height: calc(11 / 863 * 100vw);
+        flex-shrink: 0;
+        margin-left: -10px;
+        transition: fill 300ms ease-in-out;
+    }
+
     .dsgnr-agency {
         margin-top: -9rem;
     }
@@ -530,6 +630,30 @@ body {
         flex-direction: column;
         align-items: center;
         width: 100%; /* Занимает всю ширину контейнера */
+    }
+
+    .button-start:hover .text-start {
+        transform: translateX(calc(-35 / 1440 * 100vw));
+        color: #1E1E1E;
+        font-weight: 500;
+    }
+
+    .button-start:hover .arrow-line {
+        width: calc(109 / 1440 * 100vw);
+    }
+
+    .arrow-line {
+        width: calc(46 / 1025 * 100vw);
+        height: 1px;
+        transition: width 300ms ease-in-out;
+    }
+
+    .arrow-head {
+        width: calc(10 / 1025 * 100vw);
+        height: calc(11 / 1025 * 100vw);
+        flex-shrink: 0;
+        margin-left: -10px;
+        transition: fill 300ms ease-in-out;
     }
 
     .skill-container {
