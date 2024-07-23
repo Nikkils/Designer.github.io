@@ -415,6 +415,7 @@ body {
 
     .button-start{
         margin-top: 14rem;
+        margin-left: -8rem;
         width: 365px;
         height: 147px;
     }
